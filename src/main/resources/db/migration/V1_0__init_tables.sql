@@ -1,0 +1,20 @@
+CREATE TABLE `option_logs` (
+  `id` bigint(20) NOT NULL COMMENT '主键' AUTO_INCREMENT,
+  `code` varchar(30) NOT NULL COMMENT '错误码',
+  `error_uri` varchar(30) NOT NULL COMMENT '请求的URI',
+  `error_message` varchar(300) NOT NULL COMMENT '错误信息',
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `user` (
+  `id` bigint(20) NOT NULL COMMENT '主键' AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL COMMENT '错误码',
+  `email` varchar(30) NOT NULL COMMENT '请求的URI',
+  `password` varchar(300) NOT NULL COMMENT '错误信息',
+  `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
+  `modify_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
+  `status` bigint(10) NOT NULL DEFAULT 0 COMMENT '状态',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
